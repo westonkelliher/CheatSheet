@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjysk1jeiwrtl"]
+
+[ext_resource type="Script" path="res://mod_entry_line.gd" id="1_06fq0"]
+[ext_resource type="PackedScene" uid="uid://c3on2nikxucwy" path="res://modifer.tscn" id="1_mlrvp"]
+[ext_resource type="PackedScene" uid="uid://b2t8vymkhd775" path="res://key.tscn" id="2_q21l6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lu7qh"]
+font_size = 28
+font_color = Color(0.165656, 0.165656, 0.165656, 1)
+
+[node name="ModEntryLine" type="HBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_06fq0")
+
+[node name="Modifer" parent="." instance=ExtResource("1_mlrvp")]
+layout_mode = 2
+
+[node name="Key" parent="." instance=ExtResource("2_q21l6")]
+layout_mode = 2
+frame = 0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "- do something"
+label_settings = SubResource("LabelSettings_lu7qh")

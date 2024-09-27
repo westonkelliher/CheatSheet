@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://buvl2p2ayjbfa"]
+
+[ext_resource type="Script" path="res://entry_line.gd" id="1_1kerm"]
+[ext_resource type="PackedScene" uid="uid://b2t8vymkhd775" path="res://key.tscn" id="1_j50u2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cqyg2"]
+font_size = 28
+font_color = Color(0.165656, 0.165656, 0.165656, 1)
+
+[node name="EntryLine" type="HBoxContainer"]
+custom_minimum_size = Vector2(250, 30)
+offset_right = 250.0
+offset_bottom = 30.0
+script = ExtResource("1_1kerm")
+letter = "D"
+
+[node name="Key" parent="." instance=ExtResource("1_j50u2")]
+layout_mode = 2
+letter = "D"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "- do something"
+label_settings = SubResource("LabelSettings_cqyg2")

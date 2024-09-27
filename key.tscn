@@ -1,0 +1,91 @@
+[gd_scene load_steps=10 format=3 uid="uid://b2t8vymkhd775"]
+
+[ext_resource type="Texture2D" uid="uid://cpsa7g56hbd1i" path="res://resources/key_small.png" id="1_76h3u"]
+[ext_resource type="Script" path="res://key.gd" id="1_mam0u"]
+[ext_resource type="Texture2D" uid="uid://cbmodauqamxu" path="res://resources/key_med.png" id="3_xnt2j"]
+[ext_resource type="LabelSettings" uid="uid://ci7y7joenkdq" path="res://resources/key.tres" id="3_y708y"]
+[ext_resource type="Texture2D" uid="uid://i8qhmvrraehl" path="res://resources/key_extra.png" id="4_qlkwt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbn8i"]
+atlas = ExtResource("1_76h3u")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjs2d"]
+atlas = ExtResource("3_xnt2j")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjoyv"]
+atlas = ExtResource("4_qlkwt")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2p7dc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbn8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjs2d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjoyv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Key" type="Control"]
+custom_minimum_size = Vector2(110, 70)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mam0u")
+frame = null
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite" type="AnimatedSprite2D" parent="Control"]
+texture_filter = 4
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_2p7dc")
+
+[node name="Control" type="CenterContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.5
+offset_top = -20.0
+offset_right = 9.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/Control"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+text = "K"
+label_settings = ExtResource("3_y708y")
+horizontal_alignment = 1
+vertical_alignment = 1

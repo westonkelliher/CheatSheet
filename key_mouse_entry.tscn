@@ -6,6 +6,7 @@
 [ext_resource type="LabelSettings" uid="uid://b2rgpl2fw8844" path="res://entry_line.tres" id="3_rww58"]
 
 [node name="KeyMouseEntry" type="HBoxContainer"]
+custom_minimum_size = Vector2(0, 90)
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_67w68")

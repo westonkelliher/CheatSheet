@@ -83,7 +83,7 @@ animations = [{
 }]
 
 [node name="Graphic" type="Control"]
-custom_minimum_size = Vector2(90, 70)
+custom_minimum_size = Vector2(70, 70)
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ddajxqv84j5c2"]
+[gd_scene load_steps=10 format=3 uid="uid://ddajxqv84j5c2"]
 
 [ext_resource type="Script" path="res://stage.gd" id="1_63qao"]
 [ext_resource type="PackedScene" uid="uid://cil6od8i3xnjh" path="res://mouse_entry.tscn" id="2_8hkw8"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c7oc25magnxyu" path="res://placeholder.tscn" id="3_1rgef"]
 [ext_resource type="PackedScene" uid="uid://deu7e5fgw7lk" path="res://mod_mouse_entry.tscn" id="3_o3ycn"]
 [ext_resource type="PackedScene" uid="uid://cjysk1jeiwrtl" path="res://mod_entry_line.tscn" id="4_1ugwi"]
+[ext_resource type="PackedScene" uid="uid://dgjeq44r26mbl" path="res://key_mouse_entry.tscn" id="5_1iges"]
 
 [sub_resource type="FontVariation" id="FontVariation_ycq5c"]
 variation_embolden = 0.5
@@ -48,7 +49,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.7
+size_flags_stretch_ratio = 0.6
 
 [node name="Title" type="Label" parent="VBox/HBox1/VBox_M_B1/VBox_M"]
 layout_mode = 2
@@ -58,21 +59,20 @@ horizontal_alignment = 1
 
 [node name="MouseEntry" parent="VBox/HBox1/VBox_M_B1/VBox_M" instance=ExtResource("2_8hkw8")]
 layout_mode = 2
+frame_mouse = 3
+frame_action = 1
+description = "- rotate view"
 
 [node name="ModMouseEntry" parent="VBox/HBox1/VBox_M_B1/VBox_M" instance=ExtResource("3_o3ycn")]
 layout_mode = 2
+frame_mouse = 3
+frame_action = 1
+description = "- pan view"
 
 [node name="MouseEntry2" parent="VBox/HBox1/VBox_M_B1/VBox_M" instance=ExtResource("2_8hkw8")]
 layout_mode = 2
-
-[node name="Placeholder" parent="VBox/HBox1/VBox_M_B1/VBox_M" instance=ExtResource("3_1rgef")]
-layout_mode = 2
-
-[node name="Placeholder2" parent="VBox/HBox1/VBox_M_B1/VBox_M" instance=ExtResource("3_1rgef")]
-layout_mode = 2
-
-[node name="Placeholder3" parent="VBox/HBox1/VBox_M_B1/VBox_M" instance=ExtResource("3_1rgef")]
-layout_mode = 2
+frame_mouse = 3
+description = "- zoom in/out (by scrolling)"
 
 [node name="VBox_B1" type="VBoxContainer" parent="VBox/HBox1/VBox_M_B1"]
 layout_mode = 2
@@ -84,8 +84,10 @@ text = "Basics 1"
 label_settings = SubResource("LabelSettings_3plih")
 horizontal_alignment = 1
 
-[node name="Placeholder" parent="VBox/HBox1/VBox_M_B1/VBox_B1" instance=ExtResource("3_1rgef")]
+[node name="MouseEntry" parent="VBox/HBox1/VBox_M_B1/VBox_B1" instance=ExtResource("2_8hkw8")]
 layout_mode = 2
+frame_mouse = 1
+description = "- select point or object"
 
 [node name="EntryLine" parent="VBox/HBox1/VBox_M_B1/VBox_B1" instance=ExtResource("2_08lh7")]
 layout_mode = 2
@@ -93,8 +95,10 @@ letter = "TAB"
 description = "- toggle edit/object mode"
 frame = 1
 
-[node name="Placeholder2" parent="VBox/HBox1/VBox_M_B1/VBox_B1" instance=ExtResource("3_1rgef")]
+[node name="KeyMouseEntry" parent="VBox/HBox1/VBox_M_B1/VBox_B1" instance=ExtResource("5_1iges")]
 layout_mode = 2
+letter = "`"
+frame_action = 3
 
 [node name="EntryLine2" parent="VBox/HBox1/VBox_M_B1/VBox_B1" instance=ExtResource("2_08lh7")]
 layout_mode = 2

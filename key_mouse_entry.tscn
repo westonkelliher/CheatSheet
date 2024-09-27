@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgjeq44r26mbl"]
+[gd_scene load_steps=5 format=3 uid="uid://dgjeq44r26mbl"]
 
+[ext_resource type="Script" path="res://key_mouse_entry.gd" id="1_67w68"]
 [ext_resource type="PackedScene" uid="uid://b2t8vymkhd775" path="res://key.tscn" id="1_pbap5"]
 [ext_resource type="PackedScene" uid="uid://cpokxavv0vfuv" path="res://graphic.tscn" id="2_m0jul"]
 [ext_resource type="LabelSettings" uid="uid://b2rgpl2fw8844" path="res://entry_line.tres" id="3_rww58"]
@@ -7,6 +8,7 @@
 [node name="KeyMouseEntry" type="HBoxContainer"]
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_67w68")
 
 [node name="Key" parent="." instance=ExtResource("1_pbap5")]
 layout_mode = 2

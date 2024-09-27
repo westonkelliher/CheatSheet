@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://byniwc345y3sj"]
+
+[ext_resource type="Script" path="res://additional.gd" id="1_5elnh"]
+[ext_resource type="LabelSettings" uid="uid://dvlplqacumm21" path="res://additional.tres" id="2_w3d53"]
+
+[node name="Additional" type="HBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_5elnh")
+
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "* additional info"
+label_settings = ExtResource("2_w3d53")

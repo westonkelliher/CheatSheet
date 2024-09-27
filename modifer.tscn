@@ -9,7 +9,7 @@ font = ExtResource("2_rkmuh")
 font_size = 22
 font_color = Color(0, 0, 0, 1)
 outline_size = 5
-outline_color = Color(9.14484e-07, 0.539226, 0.541646, 1)
+outline_color = Color(0.324, 0.54, 0.54, 1)
 
 [node name="Modifer" type="Control"]
 custom_minimum_size = Vector2(60, 70)

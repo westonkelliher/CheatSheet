@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dvlplqacumm21"]
+
+[ext_resource type="FontFile" uid="uid://midm2jrcukwg" path="res://resources/NotoSansMono_Condensed-SemiBold.ttf" id="1_5d1vk"]
+
+[resource]
+font = ExtResource("1_5d1vk")
+font_size = 28
+font_color = Color(0.165656, 0.165656, 0.165656, 1)

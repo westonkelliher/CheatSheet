@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://2nfrweosxmlu"]
+
+[ext_resource type="Script" path="res://paragraph.gd" id="1_7044j"]
+[ext_resource type="FontFile" uid="uid://c8qq627x3wedi" path="res://resources/NotoSansMono-Bold.ttf" id="1_ol1u5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5icxo"]
+font = ExtResource("1_ol1u5")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Paragraph" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_7044j")
+
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "Object vs Edit Mode"
+label_settings = SubResource("LabelSettings_5icxo")

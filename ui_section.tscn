@@ -1,0 +1,100 @@
+[gd_scene load_steps=12 format=3 uid="uid://ja17wjysf2xw"]
+
+[ext_resource type="Script" path="res://ui_section.gd" id="1_36me1"]
+[ext_resource type="Texture2D" uid="uid://dsa03ahx6l6fw" path="res://resources/data_icons.png" id="1_am1i6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dk8mn"]
+bg_color = Color(0.666569, 0.666569, 0.666568, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjx7w"]
+atlas = ExtResource("1_am1i6")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2tm6y"]
+atlas = ExtResource("1_am1i6")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3jb7"]
+atlas = ExtResource("1_am1i6")
+region = Rect2(100, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ot5nf"]
+atlas = ExtResource("1_am1i6")
+region = Rect2(150, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ie1m"]
+atlas = ExtResource("1_am1i6")
+region = Rect2(200, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vkopq"]
+atlas = ExtResource("1_am1i6")
+region = Rect2(250, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsdul"]
+atlas = ExtResource("1_am1i6")
+region = Rect2(300, 0, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_or6ne"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjx7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2tm6y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3jb7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ot5nf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ie1m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vkopq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vsdul")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="UISection" type="VBoxContainer"]
+anchors_preset = -1
+anchor_right = 0.365
+anchor_bottom = 0.157
+offset_right = 1.0
+offset_bottom = 0.399994
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_36me1")
+
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(85, 85)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dk8mn")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(5, 5)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_or6ne")
+frame = 3
+centered = false

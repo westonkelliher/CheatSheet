@@ -1,0 +1,276 @@
+[gd_scene load_steps=12 format=3 uid="uid://dp3c3y2mrb05w"]
+
+[ext_resource type="PackedScene" uid="uid://cil6od8i3xnjh" path="res://mouse_entry.tscn" id="1_s4y82"]
+[ext_resource type="PackedScene" uid="uid://deu7e5fgw7lk" path="res://mod_mouse_entry.tscn" id="2_rkepe"]
+[ext_resource type="PackedScene" uid="uid://buvl2p2ayjbfa" path="res://entry_line.tscn" id="3_q1bk8"]
+[ext_resource type="PackedScene" uid="uid://dgjeq44r26mbl" path="res://key_mouse_entry.tscn" id="4_hmpyp"]
+[ext_resource type="PackedScene" uid="uid://cjysk1jeiwrtl" path="res://mod_entry_line.tscn" id="5_hkugp"]
+[ext_resource type="PackedScene" uid="uid://63pw0jtd5jtf" path="res://long_entry.tscn" id="6_armt5"]
+[ext_resource type="LabelSettings" uid="uid://b2rgpl2fw8844" path="res://entry_line.tres" id="7_ogq1o"]
+[ext_resource type="PackedScene" uid="uid://beod1r6hnvn27" path="res://double_mod_entry.tscn" id="8_4bihd"]
+[ext_resource type="PackedScene" uid="uid://byniwc345y3sj" path="res://additional.tscn" id="9_dsi8r"]
+
+[sub_resource type="FontVariation" id="FontVariation_ycq5c"]
+variation_embolden = 0.5
+
+[sub_resource type="LabelSettings" id="LabelSettings_n41kc"]
+font = SubResource("FontVariation_ycq5c")
+font_size = 46
+font_color = Color(0, 0, 0, 1)
+
+[node name="Substage1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="HBox1" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="VBoxContainer/HBox1"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="VBox_M_B1" type="VBoxContainer" parent="VBoxContainer/HBox1"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBox_M" type="VBoxContainer" parent="VBoxContainer/HBox1/VBox_M_B1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.6
+
+[node name="Title" type="Label" parent="VBoxContainer/HBox1/VBox_M_B1/VBox_M"]
+layout_mode = 2
+text = "Movement"
+label_settings = SubResource("LabelSettings_n41kc")
+horizontal_alignment = 1
+
+[node name="MouseEntry" parent="VBoxContainer/HBox1/VBox_M_B1/VBox_M" instance=ExtResource("1_s4y82")]
+layout_mode = 2
+frame_mouse = 3
+frame_action = 1
+description = "  - rotate view"
+
+[node name="ModMouseEntry" parent="VBoxContainer/HBox1/VBox_M_B1/VBox_M" instance=ExtResource("2_rkepe")]
+layout_mode = 2
+frame_mouse = 3
+frame_action = 1
+description = "  - pan view"
+
+[node name="MouseEntry2" parent="VBoxContainer/HBox1/VBox_M_B1/VBox_M" instance=ExtResource("1_s4y82")]
+layout_mode = 2
+frame_mouse = 3
+description = "- zoom in/out (by scrolling)"
+
+[node name="VBox_B1" type="VBoxContainer" parent="VBoxContainer/HBox1/VBox_M_B1"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Title" type="Label" parent="VBoxContainer/HBox1/VBox_M_B1/VBox_B1"]
+layout_mode = 2
+text = "Basics 1"
+label_settings = SubResource("LabelSettings_n41kc")
+horizontal_alignment = 1
+
+[node name="MouseEntry" parent="VBoxContainer/HBox1/VBox_M_B1/VBox_B1" instance=ExtResource("1_s4y82")]
+layout_mode = 2
+frame_mouse = 1
+description = "- select point or object"
+
+[node name="EntryLine" parent="VBoxContainer/HBox1/VBox_M_B1/VBox_B1" instance=ExtResource("3_q1bk8")]
+layout_mode = 2
+letter = "TAB"
+description = "- toggle edit/object mode"
+frame = 1
+
+[node name="KeyMouseEntry" parent="VBoxContainer/HBox1/VBox_M_B1/VBox_B1" instance=ExtResource("4_hmpyp")]
+layout_mode = 2
+letter = "`"
+frame_action = 3
+description = "  - top view"
+
+[node name="EntryLine2" parent="VBoxContainer/HBox1/VBox_M_B1/VBox_B1" instance=ExtResource("3_q1bk8")]
+layout_mode = 2
+letter = "E"
+description = "- extrude"
+
+[node name="EntryLine3" parent="VBoxContainer/HBox1/VBox_M_B1/VBox_B1" instance=ExtResource("3_q1bk8")]
+layout_mode = 2
+letter = "G"
+description = "- move"
+
+[node name="MouseEntry2" parent="VBoxContainer/HBox1/VBox_M_B1/VBox_B1" instance=ExtResource("1_s4y82")]
+layout_mode = 2
+frame_mouse = 1
+description = "- finalize"
+
+[node name="MouseEntry3" parent="VBoxContainer/HBox1/VBox_M_B1/VBox_B1" instance=ExtResource("1_s4y82")]
+layout_mode = 2
+frame_mouse = 2
+description = "- cancel movement"
+
+[node name="VBox_B2" type="VBoxContainer" parent="VBoxContainer/HBox1"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="VBoxContainer/HBox1/VBox_B2"]
+layout_mode = 2
+text = "Basics 2"
+label_settings = SubResource("LabelSettings_n41kc")
+horizontal_alignment = 1
+
+[node name="MouseEntry" parent="VBoxContainer/HBox1/VBox_B2" instance=ExtResource("1_s4y82")]
+layout_mode = 2
+frame_mouse = 1
+frame_action = 1
+description = "  - box select"
+
+[node name="ModMouseEntry" parent="VBoxContainer/HBox1/VBox_B2" instance=ExtResource("2_rkepe")]
+layout_mode = 2
+frame_mouse = 1
+description = "- add pont(s) to selection"
+
+[node name="EntryLine" parent="VBoxContainer/HBox1/VBox_B2" instance=ExtResource("3_q1bk8")]
+layout_mode = 2
+letter = "R"
+description = "- rotate"
+
+[node name="EntryLine2" parent="VBoxContainer/HBox1/VBox_B2" instance=ExtResource("3_q1bk8")]
+layout_mode = 2
+letter = "S"
+description = "- scale"
+
+[node name="EntryLine3" parent="VBoxContainer/HBox1/VBox_B2" instance=ExtResource("3_q1bk8")]
+layout_mode = 2
+letter = "X"
+description = "- delete"
+
+[node name="EntryLine4" parent="VBoxContainer/HBox1/VBox_B2" instance=ExtResource("3_q1bk8")]
+layout_mode = 2
+letter = "F"
+description = "- create line (2 points selected)"
+
+[node name="EntryLine5" parent="VBoxContainer/HBox1/VBox_B2" instance=ExtResource("3_q1bk8")]
+layout_mode = 2
+letter = "F"
+description = "- create face (3+ points selected)"
+
+[node name="EntryLine7" parent="VBoxContainer/HBox1/VBox_B2" instance=ExtResource("3_q1bk8")]
+layout_mode = 2
+letter = "X"
+description = "- lock axis (also Y and Z)"
+
+[node name="EntryLine8" parent="VBoxContainer/HBox1/VBox_B2" instance=ExtResource("3_q1bk8")]
+layout_mode = 2
+letter = "0-9"
+description = "- exact value"
+frame = 2
+
+[node name="KeyMouseEntry" parent="VBoxContainer/HBox1/VBox_B2" instance=ExtResource("4_hmpyp")]
+layout_mode = 2
+letter = "."
+frame_action = 2
+description = "   - pivot: median point"
+
+[node name="KeyMouseEntry2" parent="VBoxContainer/HBox1/VBox_B2" instance=ExtResource("4_hmpyp")]
+layout_mode = 2
+letter = "."
+frame_action = 3
+description = "  - pivot: 3D cursor"
+
+[node name="ModEntryLine" parent="VBoxContainer/HBox1/VBox_B2" instance=ExtResource("5_hkugp")]
+layout_mode = 2
+letter = "A"
+description = "- add object (in object mode)"
+
+[node name="EntryLine6" parent="VBoxContainer/HBox1/VBox_B2" instance=ExtResource("3_q1bk8")]
+layout_mode = 2
+letter = "F12"
+description = "- render image"
+frame = 2
+
+[node name="VBox_A" type="VBoxContainer" parent="VBoxContainer/HBox1"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="VBoxContainer/HBox1/VBox_A"]
+layout_mode = 2
+text = "Advanced"
+label_settings = SubResource("LabelSettings_n41kc")
+horizontal_alignment = 1
+
+[node name="ModMouseEntry" parent="VBoxContainer/HBox1/VBox_A" instance=ExtResource("2_rkepe")]
+layout_mode = 2
+letters = "Alt"
+frame_mouse = 1
+description = "- select \"loop\""
+
+[node name="EntryLine1" parent="VBoxContainer/HBox1/VBox_A" instance=ExtResource("3_q1bk8")]
+layout_mode = 2
+letter = "M"
+description = "- merge points"
+
+[node name="EntryLine2" parent="VBoxContainer/HBox1/VBox_A" instance=ExtResource("3_q1bk8")]
+layout_mode = 2
+letter = "H"
+description = "- hide points/objects"
+
+[node name="ModEntryLine" parent="VBoxContainer/HBox1/VBox_A" instance=ExtResource("5_hkugp")]
+layout_mode = 2
+mod = "Alt"
+letter = "H"
+description = "- unhide points/objects"
+
+[node name="EntryLine" parent="VBoxContainer/HBox1/VBox_A" instance=ExtResource("3_q1bk8")]
+layout_mode = 2
+letter = "A"
+description = "- select all"
+
+[node name="LongEntry" parent="VBoxContainer/HBox1/VBox_A" instance=ExtResource("6_armt5")]
+layout_mode = 2
+description = "- align points (median pivot)"
+
+[node name="LongEntry2" parent="VBoxContainer/HBox1/VBox_A" instance=ExtResource("6_armt5")]
+layout_mode = 2
+description = "- move onto axis (3d cursor pivot)"
+
+[node name="Separate" type="Label" parent="VBoxContainer/HBox1/VBox_A"]
+layout_mode = 2
+text = "____________________________________"
+label_settings = ExtResource("7_ogq1o")
+
+[node name="ModEntryLine2" parent="VBoxContainer/HBox1/VBox_A" instance=ExtResource("5_hkugp")]
+layout_mode = 2
+mod = "Ctrl"
+letter = "R"
+description = "- add middle vertex (on edge)"
+
+[node name="ModEntryLine3" parent="VBoxContainer/HBox1/VBox_A" instance=ExtResource("5_hkugp")]
+layout_mode = 2
+mod = "Ctrl"
+letter = "R"
+description = "- add middle edges (on faces)"
+
+[node name="DoubleModEntry" parent="VBoxContainer/HBox1/VBox_A" instance=ExtResource("8_4bihd")]
+layout_mode = 2
+
+[node name="Additional" parent="VBoxContainer/HBox1/VBox_A" instance=ExtResource("9_dsi8r")]
+layout_mode = 2
+description = "^ scroll to add points on previous 3"

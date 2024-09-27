@@ -16,11 +16,11 @@
 [ext_resource type="PackedScene" uid="uid://dlhml4ukxnrch" path="res://image_.tscn" id="12_nlcfp"]
 [ext_resource type="LabelSettings" uid="uid://dvlplqacumm21" path="res://additional.tres" id="12_sgnoh"]
 
-[sub_resource type="FontVariation" id="FontVariation_ycq5c"]
+[sub_resource type="FontVariation" id="FontVariation_nt5gf"]
 variation_embolden = 0.5
 
 [sub_resource type="LabelSettings" id="LabelSettings_3plih"]
-font = SubResource("FontVariation_ycq5c")
+font = SubResource("FontVariation_nt5gf")
 font_size = 46
 font_color = Color(0, 0, 0, 1)
 

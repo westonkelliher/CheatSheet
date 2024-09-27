@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://ddajxqv84j5c2"]
+[gd_scene load_steps=9 format=3 uid="uid://ddajxqv84j5c2"]
 
 [ext_resource type="Script" path="res://stage.gd" id="1_63qao"]
+[ext_resource type="PackedScene" uid="uid://cil6od8i3xnjh" path="res://mouse_entry.tscn" id="2_8hkw8"]
 [ext_resource type="PackedScene" uid="uid://buvl2p2ayjbfa" path="res://entry_line.tscn" id="2_08lh7"]
 [ext_resource type="PackedScene" uid="uid://c7oc25magnxyu" path="res://placeholder.tscn" id="3_1rgef"]
+[ext_resource type="PackedScene" uid="uid://deu7e5fgw7lk" path="res://mod_mouse_entry.tscn" id="3_o3ycn"]
 [ext_resource type="PackedScene" uid="uid://cjysk1jeiwrtl" path="res://mod_entry_line.tscn" id="4_1ugwi"]
 
 [sub_resource type="FontVariation" id="FontVariation_ycq5c"]
@@ -34,6 +36,10 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_vertical = 3
 
+[node name="Control" type="Control" parent="VBox/HBox1"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
 [node name="VBox_M_B1" type="VBoxContainer" parent="VBox/HBox1"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -49,6 +55,15 @@ layout_mode = 2
 text = "Movement"
 label_settings = SubResource("LabelSettings_3plih")
 horizontal_alignment = 1
+
+[node name="MouseEntry" parent="VBox/HBox1/VBox_M_B1/VBox_M" instance=ExtResource("2_8hkw8")]
+layout_mode = 2
+
+[node name="ModMouseEntry" parent="VBox/HBox1/VBox_M_B1/VBox_M" instance=ExtResource("3_o3ycn")]
+layout_mode = 2
+
+[node name="MouseEntry2" parent="VBox/HBox1/VBox_M_B1/VBox_M" instance=ExtResource("2_8hkw8")]
+layout_mode = 2
 
 [node name="Placeholder" parent="VBox/HBox1/VBox_M_B1/VBox_M" instance=ExtResource("3_1rgef")]
 layout_mode = 2

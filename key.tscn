@@ -50,7 +50,6 @@ offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mam0u")
-frame = null
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 1

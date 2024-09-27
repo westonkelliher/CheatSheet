@@ -4,7 +4,7 @@ extends HBoxContainer
 @export var letters := "K" :
 	set(value):
 		letters = value
-		if !has_node("Key"):
+		if !has_node("Modifer"):
 			return
 		$Modifer.letters = value
 

@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://63pw0jtd5jtf"]
+
+[ext_resource type="Script" path="res://long_entry.gd" id="1_cjxpl"]
+[ext_resource type="PackedScene" uid="uid://b2t8vymkhd775" path="res://key.tscn" id="1_q0uoi"]
+[ext_resource type="LabelSettings" uid="uid://b2rgpl2fw8844" path="res://entry_line.tres" id="2_8aawu"]
+
+[node name="LongEntry" type="HBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_cjxpl")
+
+[node name="Key" parent="." instance=ExtResource("1_q0uoi")]
+layout_mode = 2
+letter = "S"
+
+[node name="Key2" parent="." instance=ExtResource("1_q0uoi")]
+layout_mode = 2
+letter = "X/Y"
+frame = 2
+
+[node name="Key3" parent="." instance=ExtResource("1_q0uoi")]
+layout_mode = 2
+letter = "0"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "- do something"
+label_settings = ExtResource("2_8aawu")

@@ -1,12 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://ddajxqv84j5c2"]
+[gd_scene load_steps=12 format=3 uid="uid://ddajxqv84j5c2"]
 
 [ext_resource type="Script" path="res://stage.gd" id="1_63qao"]
 [ext_resource type="PackedScene" uid="uid://cil6od8i3xnjh" path="res://mouse_entry.tscn" id="2_8hkw8"]
 [ext_resource type="PackedScene" uid="uid://buvl2p2ayjbfa" path="res://entry_line.tscn" id="2_08lh7"]
-[ext_resource type="PackedScene" uid="uid://c7oc25magnxyu" path="res://placeholder.tscn" id="3_1rgef"]
 [ext_resource type="PackedScene" uid="uid://deu7e5fgw7lk" path="res://mod_mouse_entry.tscn" id="3_o3ycn"]
 [ext_resource type="PackedScene" uid="uid://cjysk1jeiwrtl" path="res://mod_entry_line.tscn" id="4_1ugwi"]
 [ext_resource type="PackedScene" uid="uid://dgjeq44r26mbl" path="res://key_mouse_entry.tscn" id="5_1iges"]
+[ext_resource type="PackedScene" uid="uid://63pw0jtd5jtf" path="res://long_entry.tscn" id="7_c48tw"]
+[ext_resource type="LabelSettings" uid="uid://b2rgpl2fw8844" path="res://entry_line.tres" id="8_xuefr"]
+[ext_resource type="PackedScene" uid="uid://beod1r6hnvn27" path="res://double_mod_entry.tscn" id="9_677i6"]
 
 [sub_resource type="FontVariation" id="FontVariation_ycq5c"]
 variation_embolden = 0.5
@@ -131,11 +133,16 @@ text = "Basics 2"
 label_settings = SubResource("LabelSettings_3plih")
 horizontal_alignment = 1
 
-[node name="Placeholder" parent="VBox/HBox1/VBox_B2" instance=ExtResource("3_1rgef")]
+[node name="MouseEntry" parent="VBox/HBox1/VBox_B2" instance=ExtResource("2_8hkw8")]
 layout_mode = 2
+frame_mouse = 1
+frame_action = 1
+description = "  - box select"
 
-[node name="Placeholder4" parent="VBox/HBox1/VBox_B2" instance=ExtResource("3_1rgef")]
+[node name="ModMouseEntry" parent="VBox/HBox1/VBox_B2" instance=ExtResource("3_o3ycn")]
 layout_mode = 2
+frame_mouse = 1
+description = "- add pont(s) to selection"
 
 [node name="EntryLine" parent="VBox/HBox1/VBox_B2" instance=ExtResource("2_08lh7")]
 layout_mode = 2
@@ -173,11 +180,17 @@ letter = "0-9"
 description = "- exact value"
 frame = 2
 
-[node name="Placeholder5" parent="VBox/HBox1/VBox_B2" instance=ExtResource("3_1rgef")]
+[node name="KeyMouseEntry" parent="VBox/HBox1/VBox_B2" instance=ExtResource("5_1iges")]
 layout_mode = 2
+letter = "."
+frame_action = 2
+description = "   - pivot: median point"
 
-[node name="Placeholder6" parent="VBox/HBox1/VBox_B2" instance=ExtResource("3_1rgef")]
+[node name="KeyMouseEntry2" parent="VBox/HBox1/VBox_B2" instance=ExtResource("5_1iges")]
 layout_mode = 2
+letter = "."
+frame_action = 3
+description = "  - pivot: 3D cursor"
 
 [node name="ModEntryLine" parent="VBox/HBox1/VBox_B2" instance=ExtResource("4_1ugwi")]
 layout_mode = 2
@@ -199,8 +212,11 @@ text = "Advanced"
 label_settings = SubResource("LabelSettings_3plih")
 horizontal_alignment = 1
 
-[node name="Placeholder3" parent="VBox/HBox1/VBox_A" instance=ExtResource("3_1rgef")]
+[node name="ModMouseEntry" parent="VBox/HBox1/VBox_A" instance=ExtResource("3_o3ycn")]
 layout_mode = 2
+letters = "Alt"
+frame_mouse = 1
+description = "- select \"loop\""
 
 [node name="EntryLine1" parent="VBox/HBox1/VBox_A" instance=ExtResource("2_08lh7")]
 layout_mode = 2
@@ -222,14 +238,18 @@ layout_mode = 2
 letter = "A"
 description = "- select all"
 
-[node name="Placeholder" parent="VBox/HBox1/VBox_A" instance=ExtResource("3_1rgef")]
+[node name="LongEntry" parent="VBox/HBox1/VBox_A" instance=ExtResource("7_c48tw")]
 layout_mode = 2
+description = "- align points (median pivot)"
 
-[node name="Placeholder2" parent="VBox/HBox1/VBox_A" instance=ExtResource("3_1rgef")]
+[node name="LongEntry2" parent="VBox/HBox1/VBox_A" instance=ExtResource("7_c48tw")]
 layout_mode = 2
+description = "- move onto axis (3d cursor pivot)"
 
-[node name="Placeholder4" parent="VBox/HBox1/VBox_A" instance=ExtResource("3_1rgef")]
+[node name="Separate" type="Label" parent="VBox/HBox1/VBox_A"]
 layout_mode = 2
+text = "____________________________________"
+label_settings = ExtResource("8_xuefr")
 
 [node name="ModEntryLine2" parent="VBox/HBox1/VBox_A" instance=ExtResource("4_1ugwi")]
 layout_mode = 2
@@ -243,7 +263,7 @@ mod = "Ctrl"
 letter = "R"
 description = "- add middle edges (on faces)"
 
-[node name="Placeholder5" parent="VBox/HBox1/VBox_A" instance=ExtResource("3_1rgef")]
+[node name="DoubleModEntry" parent="VBox/HBox1/VBox_A" instance=ExtResource("9_677i6")]
 layout_mode = 2
 
 [node name="HBox2" type="HBoxContainer" parent="VBox"]

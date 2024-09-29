@@ -284,7 +284,6 @@ size_flags_vertical = 3
 [node name="VBox_UI" type="VBoxContainer" parent="VBox/HBox2"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 1.3
 
 [node name="Title" type="Label" parent="VBox/HBox2/VBox_UI"]
 layout_mode = 2
@@ -295,7 +294,56 @@ horizontal_alignment = 1
 [node name="UISectionRender" parent="VBox/HBox2/VBox_UI" instance=ExtResource("11_5ww3k")]
 custom_minimum_size = Vector2(0, 244)
 layout_mode = 2
+frame = 1
 frame2 = 6
+
+[node name="Additional" parent="VBox/HBox2/VBox_UI/UISectionRender" instance=ExtResource("10_cg6nq")]
+layout_mode = 2
+description = "* gives a transparent background on the output image"
+
+[node name="UISectionRender2" parent="VBox/HBox2/VBox_UI" instance=ExtResource("11_5ww3k")]
+layout_mode = 2
+frame = 1
+frame2 = 5
+
+[node name="Additional" parent="VBox/HBox2/VBox_UI/UISectionRender2" instance=ExtResource("10_cg6nq")]
+layout_mode = 2
+description = "* set output image size"
+
+[node name="UISectionRender3" parent="VBox/HBox2/VBox_UI" instance=ExtResource("11_5ww3k")]
+layout_mode = 2
+frame = 3
+frame2 = 4
+
+[node name="Additional" parent="VBox/HBox2/VBox_UI/UISectionRender3" instance=ExtResource("10_cg6nq")]
+layout_mode = 2
+description = "* exact positioning of an object"
+
+[node name="UISectionRender4" parent="VBox/HBox2/VBox_UI" instance=ExtResource("11_5ww3k")]
+layout_mode = 2
+frame = 4
+frame2 = 2
+
+[node name="UISectionRender5" parent="VBox/HBox2/VBox_UI" instance=ExtResource("11_5ww3k")]
+layout_mode = 2
+frame2 = 3
+
+[node name="UISectionRender6" parent="VBox/HBox2/VBox_UI" instance=ExtResource("11_5ww3k")]
+layout_mode = 2
+frame = 5
+
+[node name="Additional" parent="VBox/HBox2/VBox_UI/UISectionRender6" instance=ExtResource("10_cg6nq")]
+layout_mode = 2
+description = "* allows you to set the color of the grease pencil "
+
+[node name="UISectionRender7" parent="VBox/HBox2/VBox_UI" instance=ExtResource("11_5ww3k")]
+layout_mode = 2
+frame = 6
+frame2 = 1
+
+[node name="Additional" parent="VBox/HBox2/VBox_UI/UISectionRender7" instance=ExtResource("10_cg6nq")]
+layout_mode = 2
+description = "* set orthographic scale to whatever fits your drawing"
 
 [node name="VBox_Probs" type="VBoxContainer" parent="VBox/HBox2"]
 layout_mode = 2

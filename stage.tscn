@@ -100,7 +100,7 @@ description = "- select point or object"
 [node name="EntryLine" parent="VBox/HBox1/VBox_M_B1/VBox_B1" instance=ExtResource("2_08lh7")]
 layout_mode = 2
 letter = "TAB"
-description = "- toggle edit/object mode"
+description = "  - toggle edit/object mode"
 frame = 1
 
 [node name="KeyMouseEntry" parent="VBox/HBox1/VBox_M_B1/VBox_B1" instance=ExtResource("5_1iges")]
@@ -148,7 +148,7 @@ description = "  - box select"
 [node name="ModMouseEntry" parent="VBox/HBox1/VBox_B2" instance=ExtResource("3_o3ycn")]
 layout_mode = 2
 frame_mouse = 1
-description = "- add pont(s) to selection"
+description = "- add point(s) to selection"
 
 [node name="EntryLine" parent="VBox/HBox1/VBox_B2" instance=ExtResource("2_08lh7")]
 layout_mode = 2
@@ -340,7 +340,7 @@ frame = 3
 
 [node name="Additional" parent="VBox/HBox2/VBox_Probs/Paragraph3" instance=ExtResource("10_cg6nq")]
 layout_mode = 2
-description = "* this happens when you try to select object from edit mode "
+description = "* happens when you try to select object from edit mode "
 
 [node name="Paragraph4" parent="VBox/HBox2/VBox_Probs" instance=ExtResource("11_0blga")]
 layout_mode = 2

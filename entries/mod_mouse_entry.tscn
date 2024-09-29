@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://deu7e5fgw7lk"]
 
-[ext_resource type="Script" path="res://mod_mouse_entry.gd" id="1_gdxjc"]
-[ext_resource type="PackedScene" uid="uid://c3on2nikxucwy" path="res://modifer.tscn" id="1_of242"]
-[ext_resource type="PackedScene" uid="uid://cpokxavv0vfuv" path="res://graphic.tscn" id="2_svdie"]
-[ext_resource type="LabelSettings" uid="uid://b2rgpl2fw8844" path="res://entry_line.tres" id="3_x2h1f"]
+[ext_resource type="Script" path="res://entry_scripts/mod_mouse_entry.gd" id="1_gdxjc"]
+[ext_resource type="PackedScene" uid="uid://c3on2nikxucwy" path="res://pieces/modifer.tscn" id="1_of242"]
+[ext_resource type="PackedScene" uid="uid://cpokxavv0vfuv" path="res://pieces/graphic.tscn" id="2_svdie"]
+[ext_resource type="LabelSettings" uid="uid://b2rgpl2fw8844" path="res://mats/entry_line.tres" id="3_x2h1f"]
 
 [node name="ModMouseEntry" type="HBoxContainer"]
 custom_minimum_size = Vector2(0, 90)

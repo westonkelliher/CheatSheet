@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c3on2nikxucwy"]
 
-[ext_resource type="Script" path="res://modifer.gd" id="1_ftjed"]
+[ext_resource type="Script" path="res://pieces/modifer.gd" id="1_ftjed"]
 [ext_resource type="Texture2D" uid="uid://cbmodauqamxu" path="res://resources/key_med.png" id="1_ninxv"]
 [ext_resource type="FontFile" uid="uid://c8qq627x3wedi" path="res://resources/NotoSansMono-Bold.ttf" id="2_rkmuh"]
 

@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cjysk1jeiwrtl"]
 
-[ext_resource type="Script" path="res://mod_entry_line.gd" id="1_06fq0"]
-[ext_resource type="PackedScene" uid="uid://c3on2nikxucwy" path="res://modifer.tscn" id="1_mlrvp"]
-[ext_resource type="PackedScene" uid="uid://b2t8vymkhd775" path="res://key.tscn" id="2_q21l6"]
+[ext_resource type="Script" path="res://entry_scripts/mod_entry_line.gd" id="1_06fq0"]
+[ext_resource type="PackedScene" uid="uid://c3on2nikxucwy" path="res://pieces/modifer.tscn" id="1_mlrvp"]
+[ext_resource type="PackedScene" uid="uid://b2t8vymkhd775" path="res://pieces/key.tscn" id="2_q21l6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lu7qh"]
 font_size = 28

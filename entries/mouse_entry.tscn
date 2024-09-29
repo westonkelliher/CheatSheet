@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cil6od8i3xnjh"]
 
-[ext_resource type="PackedScene" uid="uid://cpokxavv0vfuv" path="res://graphic.tscn" id="1_nw1qd"]
-[ext_resource type="Script" path="res://mouse_entry.gd" id="1_vo5q0"]
-[ext_resource type="LabelSettings" uid="uid://b2rgpl2fw8844" path="res://entry_line.tres" id="2_dnwv0"]
+[ext_resource type="PackedScene" uid="uid://cpokxavv0vfuv" path="res://pieces/graphic.tscn" id="1_nw1qd"]
+[ext_resource type="Script" path="res://entry_scripts/mouse_entry.gd" id="1_vo5q0"]
+[ext_resource type="LabelSettings" uid="uid://b2rgpl2fw8844" path="res://mats/entry_line.tres" id="2_dnwv0"]
 
 [node name="MouseEntry" type="HBoxContainer"]
 custom_minimum_size = Vector2(0, 90)

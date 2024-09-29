@@ -1,14 +1,14 @@
 [gd_scene load_steps=12 format=3 uid="uid://dp3c3y2mrb05w"]
 
-[ext_resource type="PackedScene" uid="uid://cil6od8i3xnjh" path="res://mouse_entry.tscn" id="1_s4y82"]
-[ext_resource type="PackedScene" uid="uid://deu7e5fgw7lk" path="res://mod_mouse_entry.tscn" id="2_rkepe"]
-[ext_resource type="PackedScene" uid="uid://buvl2p2ayjbfa" path="res://entry_line.tscn" id="3_q1bk8"]
-[ext_resource type="PackedScene" uid="uid://dgjeq44r26mbl" path="res://key_mouse_entry.tscn" id="4_hmpyp"]
-[ext_resource type="PackedScene" uid="uid://cjysk1jeiwrtl" path="res://mod_entry_line.tscn" id="5_hkugp"]
-[ext_resource type="PackedScene" uid="uid://63pw0jtd5jtf" path="res://long_entry.tscn" id="6_armt5"]
-[ext_resource type="LabelSettings" uid="uid://b2rgpl2fw8844" path="res://entry_line.tres" id="7_ogq1o"]
-[ext_resource type="PackedScene" uid="uid://beod1r6hnvn27" path="res://double_mod_entry.tscn" id="8_4bihd"]
-[ext_resource type="PackedScene" uid="uid://byniwc345y3sj" path="res://additional.tscn" id="9_dsi8r"]
+[ext_resource type="PackedScene" uid="uid://cil6od8i3xnjh" path="res://entries/mouse_entry.tscn" id="1_s4y82"]
+[ext_resource type="PackedScene" uid="uid://deu7e5fgw7lk" path="res://entries/mod_mouse_entry.tscn" id="2_rkepe"]
+[ext_resource type="PackedScene" uid="uid://buvl2p2ayjbfa" path="res://entries/entry_line.tscn" id="3_q1bk8"]
+[ext_resource type="PackedScene" uid="uid://dgjeq44r26mbl" path="res://entries/key_mouse_entry.tscn" id="4_hmpyp"]
+[ext_resource type="PackedScene" uid="uid://cjysk1jeiwrtl" path="res://entries/mod_entry_line.tscn" id="5_hkugp"]
+[ext_resource type="PackedScene" uid="uid://63pw0jtd5jtf" path="res://entries/long_entry.tscn" id="6_armt5"]
+[ext_resource type="LabelSettings" uid="uid://b2rgpl2fw8844" path="res://mats/entry_line.tres" id="7_ogq1o"]
+[ext_resource type="PackedScene" uid="uid://beod1r6hnvn27" path="res://entries/double_mod_entry.tscn" id="8_4bihd"]
+[ext_resource type="PackedScene" uid="uid://byniwc345y3sj" path="res://entries/additional.tscn" id="9_dsi8r"]
 
 [sub_resource type="FontVariation" id="FontVariation_ycq5c"]
 variation_embolden = 0.5

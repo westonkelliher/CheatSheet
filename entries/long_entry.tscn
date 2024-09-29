@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://63pw0jtd5jtf"]
 
-[ext_resource type="Script" path="res://long_entry.gd" id="1_cjxpl"]
-[ext_resource type="PackedScene" uid="uid://b2t8vymkhd775" path="res://key.tscn" id="1_q0uoi"]
-[ext_resource type="LabelSettings" uid="uid://b2rgpl2fw8844" path="res://entry_line.tres" id="2_8aawu"]
+[ext_resource type="Script" path="res://entry_scripts/long_entry.gd" id="1_cjxpl"]
+[ext_resource type="PackedScene" uid="uid://b2t8vymkhd775" path="res://pieces/key.tscn" id="1_q0uoi"]
+[ext_resource type="LabelSettings" uid="uid://b2rgpl2fw8844" path="res://mats/entry_line.tres" id="2_8aawu"]
 
 [node name="LongEntry" type="HBoxContainer"]
 offset_right = 40.0

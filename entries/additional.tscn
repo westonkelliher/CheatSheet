@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://byniwc345y3sj"]
 
-[ext_resource type="Script" path="res://additional.gd" id="1_5elnh"]
-[ext_resource type="LabelSettings" uid="uid://dvlplqacumm21" path="res://additional.tres" id="2_w3d53"]
+[ext_resource type="Script" path="res://entry_scripts/additional.gd" id="1_5elnh"]
+[ext_resource type="LabelSettings" uid="uid://dvlplqacumm21" path="res://mats/additional.tres" id="2_w3d53"]
 
 [node name="Additional" type="HBoxContainer"]
 custom_minimum_size = Vector2(0, 50)

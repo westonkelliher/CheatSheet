@@ -1,20 +1,19 @@
-[gd_scene load_steps=18 format=3 uid="uid://ddajxqv84j5c2"]
+[gd_scene load_steps=17 format=3 uid="uid://ddajxqv84j5c2"]
 
 [ext_resource type="Script" path="res://stage.gd" id="1_63qao"]
-[ext_resource type="PackedScene" uid="uid://cil6od8i3xnjh" path="res://mouse_entry.tscn" id="2_8hkw8"]
-[ext_resource type="PackedScene" uid="uid://buvl2p2ayjbfa" path="res://entry_line.tscn" id="2_08lh7"]
-[ext_resource type="PackedScene" uid="uid://deu7e5fgw7lk" path="res://mod_mouse_entry.tscn" id="3_o3ycn"]
-[ext_resource type="PackedScene" uid="uid://cjysk1jeiwrtl" path="res://mod_entry_line.tscn" id="4_1ugwi"]
-[ext_resource type="PackedScene" uid="uid://dgjeq44r26mbl" path="res://key_mouse_entry.tscn" id="5_1iges"]
-[ext_resource type="PackedScene" uid="uid://63pw0jtd5jtf" path="res://long_entry.tscn" id="7_c48tw"]
-[ext_resource type="LabelSettings" uid="uid://b2rgpl2fw8844" path="res://entry_line.tres" id="8_xuefr"]
-[ext_resource type="PackedScene" uid="uid://beod1r6hnvn27" path="res://double_mod_entry.tscn" id="9_677i6"]
-[ext_resource type="PackedScene" uid="uid://byniwc345y3sj" path="res://additional.tscn" id="10_cg6nq"]
-[ext_resource type="PackedScene" uid="uid://2nfrweosxmlu" path="res://paragraph.tscn" id="11_0blga"]
-[ext_resource type="PackedScene" uid="uid://ja17wjysf2xw" path="res://ui_section.tscn" id="11_5ww3k"]
-[ext_resource type="PackedScene" uid="uid://c4588hwr70nu5" path="res://image_2.tscn" id="12_12nwp"]
-[ext_resource type="PackedScene" uid="uid://dlhml4ukxnrch" path="res://image_.tscn" id="12_nlcfp"]
-[ext_resource type="LabelSettings" uid="uid://dvlplqacumm21" path="res://additional.tres" id="12_sgnoh"]
+[ext_resource type="PackedScene" uid="uid://cil6od8i3xnjh" path="res://entries/mouse_entry.tscn" id="2_8hkw8"]
+[ext_resource type="PackedScene" uid="uid://buvl2p2ayjbfa" path="res://entries/entry_line.tscn" id="2_08lh7"]
+[ext_resource type="PackedScene" uid="uid://deu7e5fgw7lk" path="res://entries/mod_mouse_entry.tscn" id="3_o3ycn"]
+[ext_resource type="PackedScene" uid="uid://cjysk1jeiwrtl" path="res://entries/mod_entry_line.tscn" id="4_1ugwi"]
+[ext_resource type="PackedScene" uid="uid://dgjeq44r26mbl" path="res://entries/key_mouse_entry.tscn" id="5_1iges"]
+[ext_resource type="PackedScene" uid="uid://63pw0jtd5jtf" path="res://entries/long_entry.tscn" id="7_c48tw"]
+[ext_resource type="LabelSettings" uid="uid://b2rgpl2fw8844" path="res://mats/entry_line.tres" id="8_xuefr"]
+[ext_resource type="PackedScene" uid="uid://beod1r6hnvn27" path="res://entries/double_mod_entry.tscn" id="9_677i6"]
+[ext_resource type="PackedScene" uid="uid://byniwc345y3sj" path="res://entries/additional.tscn" id="10_cg6nq"]
+[ext_resource type="PackedScene" uid="uid://2nfrweosxmlu" path="res://entries/paragraph.tscn" id="11_0blga"]
+[ext_resource type="PackedScene" uid="uid://drivgkbfu5p5l" path="res://entries/ui_section.tscn" id="11_5ww3k"]
+[ext_resource type="PackedScene" uid="uid://c4588hwr70nu5" path="res://pieces/image_2.tscn" id="12_12nwp"]
+[ext_resource type="PackedScene" uid="uid://dlhml4ukxnrch" path="res://pieces/image_.tscn" id="12_nlcfp"]
 
 [sub_resource type="FontVariation" id="FontVariation_nt5gf"]
 variation_embolden = 0.5
@@ -293,13 +292,10 @@ text = "UI"
 label_settings = SubResource("LabelSettings_3plih")
 horizontal_alignment = 1
 
-[node name="UISection" parent="VBox/HBox2/VBox_UI" instance=ExtResource("11_5ww3k")]
+[node name="UISectionRender" parent="VBox/HBox2/VBox_UI" instance=ExtResource("11_5ww3k")]
+custom_minimum_size = Vector2(0, 244)
 layout_mode = 2
-
-[node name="Label" type="Label" parent="VBox/HBox2/VBox_UI/UISection"]
-layout_mode = 2
-text = "* set exact positioning"
-label_settings = ExtResource("12_sgnoh")
+frame2 = 6
 
 [node name="VBox_Probs" type="VBoxContainer" parent="VBox/HBox2"]
 layout_mode = 2

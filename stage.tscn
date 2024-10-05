@@ -443,6 +443,6 @@ layout_mode = 2
 description = " * Google/ChatGPT"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(897, 2292)
+position = Vector2(897, 2384)
 scale = Vector2(0.85, 1)
 texture = ExtResource("15_ktito")

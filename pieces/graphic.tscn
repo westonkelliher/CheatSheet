@@ -112,10 +112,12 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Action" type="AnimatedSprite2D" parent="Control"]
+texture_filter = 4
 position = Vector2(32, -12)
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_2da15")
 
 [node name="Mouse" type="AnimatedSprite2D" parent="Control"]
+texture_filter = 4
 scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_luuxf")

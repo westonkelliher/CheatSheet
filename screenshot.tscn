@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmjn5fnu0a52s"]
+
+[ext_resource type="Script" path="res://screenshot.gd" id="1_xl8hs"]
+[ext_resource type="PackedScene" uid="uid://ddajxqv84j5c2" path="res://stage.tscn" id="2_ljhgd"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_oxnjb"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Screenshot" type="Node2D"]
+script = ExtResource("1_xl8hs")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(2000, 3100)
+
+[node name="Stage" parent="SubViewport" instance=ExtResource("2_ljhgd")]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 4
+texture = SubResource("ViewportTexture_oxnjb")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

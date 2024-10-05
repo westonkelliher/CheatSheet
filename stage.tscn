@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ddajxqv84j5c2"]
+[gd_scene load_steps=18 format=3 uid="uid://ddajxqv84j5c2"]
 
 [ext_resource type="Script" path="res://stage.gd" id="1_63qao"]
 [ext_resource type="PackedScene" uid="uid://cil6od8i3xnjh" path="res://entries/mouse_entry.tscn" id="2_8hkw8"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://drivgkbfu5p5l" path="res://entries/ui_section.tscn" id="11_5ww3k"]
 [ext_resource type="PackedScene" uid="uid://c4588hwr70nu5" path="res://pieces/image_2.tscn" id="12_12nwp"]
 [ext_resource type="PackedScene" uid="uid://dlhml4ukxnrch" path="res://pieces/image_.tscn" id="12_nlcfp"]
+[ext_resource type="Texture2D" uid="uid://dnb2hrfc08kbb" path="res://resources/lon_arrow.png" id="15_ktito"]
 
 [sub_resource type="FontVariation" id="FontVariation_nt5gf"]
 variation_embolden = 0.5
@@ -37,12 +38,14 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = 44.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="HBox1" type="HBoxContainer" parent="VBox"]
 layout_mode = 2
 size_flags_vertical = 3
+size_flags_stretch_ratio = 0.73
 
 [node name="Control" type="Control" parent="VBox/HBox1"]
 custom_minimum_size = Vector2(20, 0)
@@ -188,14 +191,14 @@ frame = 2
 [node name="KeyMouseEntry" parent="VBox/HBox1/VBox_B2" instance=ExtResource("5_1iges")]
 layout_mode = 2
 letter = "."
-frame_action = 2
-description = "   - pivot: median point"
+frame_action = 3
+description = "  - pivot: median point"
 
 [node name="KeyMouseEntry2" parent="VBox/HBox1/VBox_B2" instance=ExtResource("5_1iges")]
 layout_mode = 2
 letter = "."
-frame_action = 3
-description = "  - pivot: 3D cursor"
+frame_action = 2
+description = "   - pivot: 3D cursor"
 
 [node name="ModEntryLine" parent="VBox/HBox1/VBox_B2" instance=ExtResource("4_1ugwi")]
 layout_mode = 2
@@ -277,9 +280,14 @@ layout_mode = 2
 layout_mode = 2
 description = "^ scroll to add points on previous 3"
 
+[node name="Additional" parent="VBox" instance=ExtResource("10_cg6nq")]
+layout_mode = 2
+description = "__________________________________________________________________________________________________________________________________"
+
 [node name="HBox2" type="HBoxContainer" parent="VBox"]
 layout_mode = 2
 size_flags_vertical = 3
+size_flags_stretch_ratio = 1.1
 
 [node name="VBox_UI" type="VBoxContainer" parent="VBox/HBox2"]
 layout_mode = 2
@@ -303,7 +311,7 @@ description = "* gives a transparent background on the output image"
 
 [node name="UISectionRender2" parent="VBox/HBox2/VBox_UI" instance=ExtResource("11_5ww3k")]
 layout_mode = 2
-frame = 1
+frame = 2
 frame2 = 5
 
 [node name="Additional" parent="VBox/HBox2/VBox_UI/UISectionRender2" instance=ExtResource("10_cg6nq")]
@@ -380,7 +388,7 @@ title = "Fake Select"
 
 [node name="Image_" parent="VBox/HBox2/VBox_Probs/Paragraph3" instance=ExtResource("12_nlcfp")]
 layout_mode = 2
-frame = 3
+frame = 2
 
 [node name="Additional" parent="VBox/HBox2/VBox_Probs/Paragraph3" instance=ExtResource("10_cg6nq")]
 layout_mode = 2
@@ -392,6 +400,19 @@ title = "Grease Pencil Not Showing Up"
 
 [node name="Additional" parent="VBox/HBox2/VBox_Probs/Paragraph4" instance=ExtResource("10_cg6nq")]
 layout_mode = 2
+description = "* Make sure camera is positioned above objects, facing down"
+
+[node name="Additional2" parent="VBox/HBox2/VBox_Probs/Paragraph4" instance=ExtResource("10_cg6nq")]
+layout_mode = 2
+description = "* Make sure nothing is on top of the Outline "
+
+[node name="Additional3" parent="VBox/HBox2/VBox_Probs/Paragraph4" instance=ExtResource("10_cg6nq")]
+layout_mode = 2
+description = "* Check box shown below in the 'Line Art' Modifier settings"
+
+[node name="Image_" parent="VBox/HBox2/VBox_Probs/Paragraph4" instance=ExtResource("12_nlcfp")]
+layout_mode = 2
+frame = 3
 
 [node name="Paragraph5" parent="VBox/HBox2/VBox_Probs" instance=ExtResource("11_0blga")]
 layout_mode = 2
@@ -411,6 +432,7 @@ description = "Proportional Editing and Snapping:"
 
 [node name="Image_2" parent="VBox/HBox2/VBox_Probs/Paragraph5" instance=ExtResource("12_nlcfp")]
 layout_mode = 2
+frame = -1
 
 [node name="Additional3" parent="VBox/HBox2/VBox_Probs/Paragraph5" instance=ExtResource("10_cg6nq")]
 layout_mode = 2
@@ -418,6 +440,9 @@ description = "Others:"
 
 [node name="Additional4" parent="VBox/HBox2/VBox_Probs/Paragraph5" instance=ExtResource("10_cg6nq")]
 layout_mode = 2
-description = "  - usually can google/chatgpt it"
+description = " * Google/ChatGPT"
 
-[node name="SubViewport" type="SubViewport" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(897, 2292)
+scale = Vector2(0.85, 1)
+texture = ExtResource("15_ktito")

@@ -22,9 +22,9 @@ region = Rect2(0, 0, 473, 123)
 atlas = ExtResource("4_j3mvu")
 region = Rect2(0, 0, 438, 209)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dw26b"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_yitbs"]
 atlas = ExtResource("5_g7ydo")
-region = Rect2(0, 0, 416, 198)
+region = Rect2(0, 0, 560, 198)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wdch1"]
 atlas = ExtResource("6_rs3cf")
@@ -51,7 +51,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_pkwv4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dw26b")
+"texture": SubResource("AtlasTexture_yitbs")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wdch1")
@@ -147,7 +147,6 @@ layout_mode = 2
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(32, 19)
 sprite_frames = SubResource("SpriteFrames_06yx8")
-frame = 3
 centered = false
 
 [node name="Panel" type="Panel" parent="Sprite2D"]
@@ -182,9 +181,8 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_dk8mn")
 position = Vector2(5, 19)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_or6ne")
-frame = 2
 centered = false
 
 [node name="Control2" type="Control" parent="."]
-custom_minimum_size = Vector2(0, 118)
+custom_minimum_size = Vector2(0, 87)
 layout_mode = 2

@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dlhml4ukxnrch"]
+[gd_scene load_steps=11 format=3 uid="uid://dlhml4ukxnrch"]
 
 [ext_resource type="Script" path="res://pieces/image_.gd" id="1_5b0kk"]
 [ext_resource type="Texture2D" uid="uid://30dkx44he8ly" path="res://resources/snapping_and_proport.png" id="1_6d764"]
 [ext_resource type="Texture2D" uid="uid://dluyqn8bpg87a" path="res://resources/xray_and_render.png" id="2_ckxpa"]
 [ext_resource type="Texture2D" uid="uid://dvuldm4qq5u8v" path="res://resources/real_fake_selected.png" id="4_sy6vv"]
+[ext_resource type="Texture2D" uid="uid://6h2e4wea6isj" path="res://resources/towards_camera.png" id="5_v7agr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y81sl"]
 atlas = ExtResource("1_6d764")
@@ -17,6 +18,10 @@ region = Rect2(0, 0, 200, 100)
 atlas = ExtResource("4_sy6vv")
 region = Rect2(0, 0, 350, 100)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_girxk"]
+atlas = ExtResource("5_v7agr")
+region = Rect2(0, 0, 287, 109)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_fvlgm"]
 animations = [{
 "frames": [{
@@ -28,6 +33,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cdlya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_girxk")
 }],
 "loop": true,
 "name": &"default",
